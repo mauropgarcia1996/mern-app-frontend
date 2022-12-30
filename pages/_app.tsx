@@ -2,11 +2,21 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
+import Layout from "./layout";
+import "../styles/globals.css";
 
-export default function App(props: AppProps) {
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: React.ReactElement) => React.ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App(props: AppPropsWithLayout) {
   const { Component, pageProps } = props;
-
-  return (
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(
     <>
       <Head>
         <title>Page title</title>
