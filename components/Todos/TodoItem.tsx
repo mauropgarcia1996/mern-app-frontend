@@ -1,6 +1,22 @@
 import { Box, Text } from "@mantine/core";
+import { mutate } from "swr";
+import { AxiosInstance } from "../../config/axiosConfig";
 
-const TodoItem = ({ todo, handleIsDone }) => {
+const TodoItem = ({ todo }) => {
+  const handleIsDone = (id: string, done: boolean) => {
+    AxiosInstance({
+      method: "PATCH",
+      url: `/todos/${id}`,
+      data: { done: !done },
+    })
+      .then((res) => {
+        mutate("/todos");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <Box
       sx={(theme) => ({
