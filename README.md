@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MERN TODO App
+Welcome to my full-stack TODO app! This project was built using the following technologies:
+
+## Technologies
+- MongoDB: A popular NoSQL database that was used to store the data for the TODO app
+- Express: A web framework for Node.js that was used to build the backend API for the TODO app
+- React: A JavaScript library for building user interfaces that was used to build the frontend of the TODO app
+- Node.js: A JavaScript runtime that was used to run the backend of the TODO app
+
+
+In addition to these technologies, the project also makes use of the following:
+
+- Next.js: A framework for building server-rendered React applications. It was used to build the frontend of the TODO app and handle server-side rendering.
+- Nest.js: A framework for building scalable Node.js server-side applications. It was used to build the backend API for the TODO app and provide a modular architecture.
+- Fly.io: A platform for building, deploying, and scaling serverless applications. It was used to host the TODO app and handle the continuous deployment process.
+
+## Learning Outcomes
+All of these technologies contribute to my learning in different ways. Working with MongoDB allowed me to learn about NoSQL databases and how to interact with them using the MongoDB driver. Building the backend API with Express and Nest.js taught me about building RESTful APIs and how to structure the backend of a web application. Using React and Next.js helped me learn about building modern frontends and the concepts of server-side rendering. Finally, working with Fly.io gave me experience with serverless architectures and continuous deployment.
+
+Overall, this project has been a great learning experience and has helped me improve my skills in full-stack web development. I hope you find this project useful as well!
+
 
 ## Getting Started
-
-First, run the development server:
+To get started, you can clone the repository and install the dependencies.
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone the repository (frontend & backend)
+git clone https://github.com/mauropgarcia1996/mern-app-frontend
+git clone https://github.com/mauropgarcia1996/mern-app
+
+# Install the dependencies (frontend & backend)
+cd mern-app-frontend
+npm install
+cd ../mern-app
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can then run the frontend and backend of the TODO app using the following commands:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+# Run the frontend
+cd mern-app-frontend
+npm run dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Run the backend
+cd mern-app
+npm run start:dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can now access the frontend of the TODO app at http://localhost:3000 and the backend at http://localhost:8080.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
