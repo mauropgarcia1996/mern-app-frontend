@@ -8,7 +8,7 @@ import TodoItem from "./TodoItem";
 const fetcher = (url) => AxiosInstance.get(url).then((res) => res.data);
 
 const TodosContainer = () => {
-  const { data, error } = useSWR("/todos", fetcher);
+  const { data } = useSWR("/todos", fetcher);
 
   return (
     <>
