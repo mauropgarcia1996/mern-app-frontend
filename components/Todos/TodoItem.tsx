@@ -2,7 +2,7 @@ import { Box, Text } from "@mantine/core";
 import { mutate } from "swr";
 import { AxiosInstance } from "../../config/axiosConfig";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo }: any) => {
   const handleIsDone = (id: string, done: boolean) => {
     AxiosInstance({
       method: "PATCH",

@@ -15,7 +15,7 @@ const Home = () => {
   );
 };
 
-Home.getLayout = (page) => {
+Home.getLayout = (page: any) => {
   return <Layout>{page}</Layout>;
 };
 

@@ -11,7 +11,7 @@ type User = {
 
 interface UserState {
   user: User | null;
-  update: (user: User) => void;
+  update: (user: User | null) => void;
 }
 
 export const useUserStore = create<UserState>()(

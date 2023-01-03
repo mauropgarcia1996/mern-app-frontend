@@ -3,7 +3,7 @@ import { mutate } from "swr";
 import useSWRMutation from "swr/mutation";
 import { AxiosInstance } from "../../config/axiosConfig";
 
-const fetcher = (url, { arg }) =>
+const fetcher = (url: string, { arg }: any) =>
   AxiosInstance.get(url, { params: { status: arg } }).then((res) => res.data);
 
 const TodoFilters = () => {
@@ -14,7 +14,7 @@ const TodoFilters = () => {
     { label: "Incompleted", value: "incompleted" },
   ];
 
-  const filterTodos = (filter) => {
+  const filterTodos = (filter: string) => {
     mutate("/todos", trigger(filter), { revalidate: false });
   };
   return (

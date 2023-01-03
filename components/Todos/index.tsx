@@ -5,7 +5,7 @@ import AddNewTodoContainer from "./AddNewTodoContainer";
 import TodoFilters from "./TodoFilters";
 import TodoItem from "./TodoItem";
 
-const fetcher = (url) => AxiosInstance.get(url).then((res) => res.data);
+const fetcher = (url: string) => AxiosInstance.get(url).then((res) => res.data);
 
 const TodosContainer = () => {
   const { data } = useSWR("/todos", fetcher);
@@ -23,7 +23,7 @@ const TodosContainer = () => {
         })}
       >
         <Stack spacing="lg">
-          {data?.map((todo, index) => (
+          {data?.map((todo: any, index: any) => (
             <TodoItem key={`todo_item_${index}`} todo={todo} />
           ))}
         </Stack>
